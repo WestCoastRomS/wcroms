@@ -529,7 +529,7 @@
   <project path="tools/tradefederation/core" name="platform/tools/tradefederation" groups="pdk,tradefed" remote="aosp" />
 
   <include name="snippets/wcroms.xml" />
-  <include name="snippets/remove.xml" />
+  <include name="lineage.xml" />
 
 
 
