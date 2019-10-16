@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- Github remote -->
+  <remote  name="github"
+           fetch="https://github.com/" />
+
+  <!-- Gitlab remote -->
+  <remote  name="gitlab"
+           fetch="https://gitlab.com/" />
+
+  <!-- WCROMS Remote -->
+  <remote  name="westcoastroms"
+           revision="p9x"
+           fetch="https://github.com/WestCoastRomS/" />
+
+  <!-- LineageOS Remote -->
+  <remote name="lineageOS"
+          fetch="https://github.com/LineageOS/"  
+          revision="refs/heads/lineage-16.0"  />
+
+  <!-- DU remote -->
+  <remote  name="du"
+           revision="p9x"
+           fetch="https://github.com/DirtyUnicorns/" />
+
+  <!-- WCROMS REPOS -->
+  
+  <!-- General -->
+
+  <project path="bionic" name="android_bionic" remote="westcoastroms" />
+  <project path="bootable/recovery" name="android_bootable_recovery" remote="westcoastroms" />
+  <project path="build/make" name="android_build" remote="westcoastroms" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="android_build_soong" remote="westcoastroms" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+  <project path="manifest" name="android_manifest" remote="westcoastroms" />
+  <project path="platform_testing" name="android_platform_testing" remote="westcoastroms" />
+
+  <!-- Frameworks -->
+  <project path="frameworks/av" name="android_frameworks_av" remote="du" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="du" />
+  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="du" />
+
+  <!-- Packages -->
+  <project path="packages/apps/Bluetooth" name="android_packages_apps_Bluetooth" remote="du" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="du" />
+  <project path="packages/apps/SettingsIntelligence" name="android_packages_apps_SettingsIntelligence" remote="du" />
+
+  <!-- System -->
+  <project path="system/bt" name="android_system_bt" remote="du" />
+  <project path="system/core" name="android_system_core" remote="du" />
+  <project path="system/sepolicy" name="android_system_sepolicy" remote="du" />
+  <project path="system/update_engine" name="android_system_update_engine" remote="du" />
+
+  <!-- DU REPOS -->
+
+ <!-- Frameworks -->
+  <project path="frameworks/av" name="android_frameworks_av" remote="du" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="du" />
+  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="du" />
+
+  <!-- Packages -->
+  <project path="packages/apps/Bluetooth" name="android_packages_apps_Bluetooth" remote="du" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="du" />
+  <project path="packages/apps/SettingsIntelligence" name="android_packages_apps_SettingsIntelligence" remote="du" />
+
+  <!-- System -->
+  <project path="system/bt" name="android_system_bt" remote="du" />
+  <project path="system/core" name="android_system_core" remote="du" />
+  <project path="system/sepolicy" name="android_system_sepolicy" remote="du" />
+  <project path="system/update_engine" name="android_system_update_engine" remote="du" />
+
+  <!-- Vendor -->
+  <project path="vendor/du" name="android_vendor_du" remote="du" >
+    <linkfile src="scripts/merge-aosp.sh" dest="merge-aosp.sh" />
+  </project>
+  <project path="vendor/extras" name="android_vendor_extras" remote="du" />
+  <project path="vendor/themes" name="android_vendor_themes" remote="du" />
+
+  <!-- LineageOS additions -->
+  <project path="device/lineage/atv" name="LineageOS/android_device_lineage_atv" />
+  <project path="external/bash" name="LineageOS/android_external_bash" />
+  <project path="external/exfat" name="LineageOS/android_external_exfat" />
+  <project path="external/htop" name="LineageOS/android_external_htop" />
+  <project path="external/libncurses" name="LineageOS/android_external_libncurses" />
+  <project path="external/libnfc-nxp" name="LineageOS/android_external_libnfc-nxp" />
+  <project path="external/libtar" name="LineageOS/android_external_libtar" />
+  <project path="external/nano" name="LineageOS/android_external_nano" />
+  <project path="external/ntfs-3g" name="LineageOS/android_external_ntfs-3g" />
+  <project path="external/openssh" name="LineageOS/android_external_openssh" />
+  <project path="external/p7zip" name="LineageOS/android_external_p7zip" />
+  <project path="external/pigz" name="LineageOS/android_external_pigz" />
+  <project path="external/rsync" name="LineageOS/android_external_rsync" />
+  <project path="external/unrar" name="LineageOS/android_external_unrar" />
+  <project path="external/vim" name="LineageOS/android_external_vim" />
+  <project path="external/zip" name="LineageOS/android_external_zip" />
+  <project path="hardware/lineage/interfaces" name="LineageOS/android_hardware_lineage_interfaces" />
+  <project path="hardware/lineage/lineagehw" name="LineageOS/android_hardware_lineage_lineagehw" />
+  <project path="hardware/lineage/livedisplay" name="LineageOS/android_hardware_lineage_livedisplay" />
+  <project path="hardware/lineage/telephony" name="LineageOS/android_hardware_lineage_telephony" />
+
+</manifest>
+
+
