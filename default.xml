@@ -548,7 +548,7 @@
   <include name="snippets/wcroms.xml" />
   <include name="snippets/extended.xml" />
   <include name="snippets/lineage.xml" />
-  <include name="snippets/p9x_default.xml" />
+
 
   <repo-hooks in-project="platform/tools/repohooks" enabled-list="pre-upload" />
 
