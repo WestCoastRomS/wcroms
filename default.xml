@@ -11,6 +11,19 @@
   <remote  name="gitlab"
            fetch="ssh://git@gitlab.com" />
 
+ <?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+ <remote  name="github"
+           fetch=".."
+           review="review.lineageos.org" />
+
+  <remote  name="private"
+           fetch="ssh://git@github.com" />
+
+  <remote  name="gitlab"
+           fetch="ssh://git@gitlab.com" />
+
   <remote  name="aosp"
            fetch="https://android.googlesource.com"
            review="android-review.googlesource.com"
@@ -30,24 +43,12 @@
   <remote  name="du"
            revision="p9x"
            fetch="https://github.com/DirtyUnicorns/" />
-
-  <remote  name="crdroid"
-           fetch="https://github.com/"
-           sync-c="true"
-           sync-j="16"
-           revision="refs/heads/9.0" />
-
-  <remote  name="crdroidmod"
-           fetch="https://github.com/"
-           sync-c="true"
-           sync-j="16"
-           revision="refs/heads/9.0" />
+ 
 
 <!-- AOSP Projects -->
 
   <project path="build/blueprint" name="platform/build/blueprint" groups="pdk,tradefed" remote="aosp" />
   <project path="build/kati" name="LineageOS/android_build_kati" groups="pdk,tradefed" />
-  <project path="bootable/recovery" name="LineageOS/android_bootable_recovery" groups="pdk" />
   <project path="compatibility/cdd" name="platform/compatibility/cdd" groups="pdk" remote="aosp" />
   <project path="cts" name="platform/cts" groups="cts,pdk-cw-fs,pdk-fs" remote="aosp" />
   <project path="developers/build" name="platform/developers/build" groups="developers" remote="aosp" />

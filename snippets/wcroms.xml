@@ -30,19 +30,9 @@
   <remote  name="du"
            revision="p9x"
            fetch="https://github.com/DirtyUnicorns/" />
+ 
 
-  <remote  name="crdroid"
-           fetch="https://github.com/"
-           sync-c="true"
-           sync-j="16"
-           revision="refs/heads/9.0" />
-
-  <remote  name="crdroidmod"
-           fetch="https://github.com/"
-           sync-c="true"
-           sync-j="16"
-           revision="refs/heads/9.0" />
-
+  
   <!-- WCROMS REPOS -->
   
   <!-- General -->
