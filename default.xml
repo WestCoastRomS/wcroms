@@ -529,8 +529,8 @@
   <project path="tools/tradefederation/core" name="platform/tools/tradefederation" groups="pdk,tradefed" remote="aosp" />
 
   <include name="snippets/wcroms.xml" />
-  <include name="snippets/extended.xml" />
-  <include name="snippets/lineage.xml" />
+  <include name="snippets/remove.xml" />
+
 
 
   <repo-hooks in-project="platform/tools/repohooks" enabled-list="pre-upload" />
